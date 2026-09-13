@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 import { CountUp } from "../components/ui/CountUp"
 import { Reveal } from "../components/ui/Reveal"
 import { UnifiedBackdrop } from "../components/ui/UnifiedBackdrop"
-import { countries, images, site, stats } from "../data/site"
+import { countries, site, stats } from "../data/site"
 import { videos } from "../data/videos"
 import { families } from "../data/products"
 
@@ -39,15 +39,12 @@ export function Home() {
             className="hero-title font-display mt-5 max-w-5xl font-medium"
           >
             <span className="hero-kicker">
-              <span className="inline-block bg-[#e39a55] px-[0.22em] text-cream">
-                Leading manufacturer
+              <span className="inline-block bg-[#c65d00] px-[0.22em] text-cream">
+                Leading manufacturer in the field of
               </span>
-              <br />
-              <span className="inline-block bg-[#e39a55] px-[0.22em] text-cream">
-                in the field of
-              </span>{" "}
             </span>
-            <span className="hero-brand text-copper-light uppercase">bromine derivatives.</span>
+            <br />
+            <span className="hero-brand text-[#c65d00] uppercase">bromine derivatives.</span>
           </motion.h1>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -152,11 +149,8 @@ export function Home() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl items-center gap-12 px-5 py-24 text-cream md:grid-cols-2">
+      <section className="mx-auto max-w-7xl px-5 py-24 text-cream">
         <Reveal>
-          <img src={images.plant} alt="Manufacturing facility" className="h-[420px] w-full rounded-[2rem] object-cover" />
-        </Reveal>
-        <Reveal delay={0.1}>
           <p className="text-[11px] tracking-[0.3em] text-copper-light uppercase">Infrastructure</p>
           <h2 className="font-display mt-3 text-4xl md:text-5xl">Glass-lined reactors. Distillation. ZLD.</h2>
           <p className="mt-5 leading-relaxed text-cream/70">
@@ -170,24 +164,26 @@ export function Home() {
         </Reveal>
       </section>
 
-      <section className="overflow-hidden py-20 text-cream">
-        <Reveal className="mx-auto max-w-7xl px-5">
-          <p className="text-[11px] tracking-[0.3em] text-copper-light uppercase">Our reach</p>
-          <h2 className="font-display mt-3 text-4xl">Exporting bromide compounds to 25+ countries.</h2>
-        </Reveal>
-        <div className="mt-10 flex overflow-hidden">
-          <div className="marquee-track flex min-w-max gap-10 pr-10 text-3xl text-cream/25 md:text-5xl">
-            {[...countries, ...countries].map((c, i) => (
-              <span key={`${c}-${i}`} className="font-display whitespace-nowrap">
-                {c}
-              </span>
-            ))}
+      <section className="px-5 py-16">
+        <div className="mx-auto max-w-7xl overflow-hidden bg-black py-14 text-cream">
+          <Reveal className="px-8">
+            <p className="text-[11px] tracking-[0.3em] text-copper-light uppercase">Our reach</p>
+            <h2 className="font-display mt-3 text-4xl">Exporting bromide compounds to 25+ countries.</h2>
+          </Reveal>
+          <div className="mt-10 flex overflow-hidden">
+            <div className="marquee-track flex min-w-max gap-10 pr-10 text-3xl text-cream/40 md:text-5xl">
+              {[...countries, ...countries].map((c, i) => (
+                <span key={`${c}-${i}`} className="font-display whitespace-nowrap">
+                  {c}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="mx-auto mt-10 max-w-7xl px-5">
-          <Link to="/reach" className="inline-flex items-center gap-2 text-sm font-medium text-copper-light">
-            See markets <ArrowRight size={16} />
-          </Link>
+          <div className="mt-10 px-8">
+            <Link to="/reach" className="inline-flex items-center gap-2 text-sm font-medium text-copper-light">
+              See markets <ArrowRight size={16} />
+            </Link>
+          </div>
         </div>
       </section>
 
