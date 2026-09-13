@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", "Times New Roman", serif;
+  --font-sans: "Outfit", "Segoe UI", sans-serif;
+  --color-ink: #07131a;
+  --color-ink-soft: #10242f;
+  --color-ink-mid: #1a3a48;
+  --color-copper: #c46a2d;
+  --color-copper-light: #e39a55;
+  --color-cream: #f3ede3;
+  --color-paper: #faf6f0;
+  --color-mist: #d5e2e6;
+  --color-teal: #1f6f6a;
+  --color-line: #d8cfc2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #c46a2d;
+  color: #faf6f0;
+}
+
+a {
+  color: inherit;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.grain::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 36s linear infinite;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.55;
+  }
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+
+.pulse-ring {
+  animation: pulse-ring 2.4s ease-out infinite;
+}
+
+.hex-grid {
+  background-image: url("data:image/svg+xml,%3Csvg width='56' height='64' viewBox='0 0 56 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28 2L52 16V44L28 58L4 44V16L28 2Z' fill='none' stroke='%23c46a2d' stroke-opacity='.12'/%3E%3C/svg%3E");
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #c46a2d transparent;
+}
+
+.site-nav-link {
+  color: #e39a55;
+}
+
+.site-nav-link:hover {
+  color: #c46a2d;
+}
+
+.backdrop-scroll {
+  opacity: calc(1 - var(--backdrop-blend, 0));
+}
+
+.backdrop-wash {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 19, 26, 0.58) 0%,
+      rgba(7, 19, 26, 0.16) 26%,
+      transparent 46%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(7, 19, 26, 0.12) 0%,
+      transparent 18%,
+      transparent 82%,
+      rgba(7, 19, 26, 0.32) 100%
+    );
+}

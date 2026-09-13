@@ -1,0 +1,303 @@
+export type Product = {
+  name: string
+  cas?: string
+  other?: string
+}
+
+export type ProductGroup = {
+  id: string
+  title: string
+  products: Product[]
+}
+
+export const coreProducts: Product[] = [
+  { name: "N-Propyl Bromide", cas: "106-94-5" },
+  { name: "N-Butyl Bromide", cas: "109-65-9" },
+  { name: "Hexyl Bromide", cas: "111-25-1" },
+  { name: "Bromobenzene", cas: "108-86-1" },
+  { name: "1-Bromo-3-chloropropane", cas: "109-70-6" },
+  { name: "6-Chloro-2-hexanone", cas: "10226-30-9" },
+  { name: "1,4-Dibromobutane", cas: "110-52-1" },
+  { name: "Para Bromo Toluene", cas: "106-38-7" },
+  { name: "Ortho Bromo Toluene", cas: "95-46-5" },
+  { name: "Tetrabutylammonium Bromide", cas: "1643-19-2" },
+  { name: "1,4-Dibromobenzene", cas: "106-37-6" },
+  { name: "Sodium Bromide", cas: "7647-15-6" },
+  { name: "Calcium Bromide", cas: "71626-99-8" },
+  { name: "Ammonium Bromide", cas: "12124-97-9" },
+  { name: "Potassium Bromide", cas: "7758-02-3" },
+  { name: "Lithium Bromide", cas: "7550-35-8" },
+  { name: "Hydrobromic Acid 48%", cas: "10035-10-6" },
+  { name: "1,6-Dibromohexane", cas: "629-03-8" },
+  { name: "Isopropyl Bromide", cas: "75-26-3" },
+  { name: "Isobutyl Bromide", cas: "78-77-3" },
+  { name: "1,2-Hexanediol", cas: "6920-22-5" },
+  { name: "Benzyl Bromide", cas: "100-39-0" },
+  { name: "Acetyl Bromide", cas: "506-96-7" },
+  { name: "Methyl 2-Bromopropionate", cas: "5445-17-0" },
+  { name: "Methyl 2-Bromoacetate", cas: "96-32-2" },
+  { name: "4-Bromo-2-chlorophenol", cas: "3964-56-5" },
+]
+
+export const bromineGroups: ProductGroup[] = [
+  {
+    id: "alkyl",
+    title: "Alkyl Bromide Compounds",
+    products: [
+      { name: "1-Bromomethane in solvents", cas: "74-83-9", other: "Methyl bromide in solvents" },
+      { name: "Ethyl Bromide", cas: "74-96-4", other: "1-Bromoethane" },
+      { name: "N-Propyl Bromide", cas: "106-94-5", other: "1-Bromopropane" },
+      { name: "2-Bromopropane", cas: "75-26-3", other: "Isopropyl bromide" },
+      { name: "1-Bromobutane", cas: "109-65-9", other: "N-Butyl bromide" },
+      { name: "2-Bromobutane", cas: "78-76-2", other: "Sec-butyl bromide" },
+      { name: "1-Bromo-2-methylpropane", cas: "78-77-3", other: "Isobutyl bromide" },
+      { name: "2-Bromo-2-methylpropane", cas: "507-19-7", other: "Tert-butyl bromide" },
+      { name: "1-Bromopentane", cas: "110-53-2", other: "N-Amyl bromide" },
+      { name: "2-Bromopentane", cas: "107-81-3", other: "Sec-amyl bromide" },
+      { name: "1-Bromohexane", cas: "111-25-1", other: "N-Hexyl bromide" },
+      { name: "1-Bromoheptane", cas: "629-04-9", other: "N-Heptyl bromide" },
+      { name: "1-Bromooctane", cas: "111-83-1", other: "N-Octyl bromide" },
+      { name: "1-Bromo-2-ethylhexane", cas: "18908-66-2", other: "Iso-octyl bromide" },
+      { name: "1-Bromodecane", cas: "112-29-8", other: "N-Decyl bromide" },
+      { name: "1-Bromododecane", cas: "143-15-7", other: "N-Lauryl bromide" },
+      { name: "1-Bromotetradecane", cas: "112-71-0", other: "Myristyl bromide" },
+      { name: "1-Bromohexadecane", cas: "112-82-3", other: "N-Cetyl bromide" },
+      { name: "1-Bromooctadecane", cas: "112-89-0", other: "Stearyl bromide" },
+    ],
+  },
+  {
+    id: "aryl",
+    title: "Aryl Bromide Compounds",
+    products: [
+      { name: "3-Bromo-1-nitrobenzene", cas: "585-79-5" },
+      { name: "4-Bromofluorobenzene", cas: "460-00-4" },
+      { name: "m-Bromoanisole", cas: "2398-37-0" },
+      { name: "Benzyl Bromide", cas: "100-39-0" },
+      { name: "N-Bromosuccinimide", cas: "128-08-5" },
+      { name: "Bromobenzene", cas: "108-86-1" },
+      { name: "1,3-Dibromo-5,5-dimethylhydantoin", cas: "77-48-5" },
+      { name: "Para-nitrobenzyl Bromide", cas: "100-11-8" },
+      { name: "4-Bromo-1,2-dichlorobenzene", cas: "18282-59-2" },
+      { name: "Hydrobromic Acid 48%", cas: "10035-10-6" },
+      { name: "Liquid Bromine", cas: "7726-95-6" },
+      { name: "HBr in Acetic Acid 30%", cas: "10035-10-6" },
+    ],
+  },
+  {
+    id: "dibromo",
+    title: "Dibromoalkane Compounds",
+    products: [
+      { name: "1,2-Dibromoethane", cas: "106-93-4", other: "Ethylene dibromide" },
+      { name: "1,3-Dibromopropane", cas: "109-64-8", other: "Trimethylene dibromide" },
+      { name: "1,4-Dibromobutane", cas: "110-52-1" },
+      { name: "1,5-Dibromopentane", cas: "111-24-0" },
+      { name: "1,6-Dibromohexane", cas: "629-03-8" },
+      { name: "1,8-Dibromooctane", cas: "4549-32-0" },
+      { name: "1,10-Dibromodecane", cas: "4101-68-2" },
+      { name: "1,12-Dibromododecane", cas: "3344-70-5" },
+    ],
+  },
+  {
+    id: "lithium",
+    title: "Lithium Salts",
+    products: [
+      { name: "Lithium Bromide Solution 55%", cas: "7550-35-8" },
+      { name: "Lithium Bromide Anhydrous", cas: "7550-35-8" },
+      { name: "Lithium Chloride Anhydrous", cas: "7447-41-8" },
+      { name: "Lithium Chloride Solution 40%", cas: "7447-41-8" },
+      { name: "Lithium Nitrate Anhydrous", cas: "7790-69-4" },
+      { name: "Lithium Iodide Trihydrate", cas: "85017-80-7" },
+      { name: "Lithium Acetate Anhydrous", cas: "6108-17-4" },
+      { name: "Lithium Fluoride", cas: "7789-24-4" },
+      { name: "LiFSI", cas: "171611-11-3" },
+    ],
+  },
+  {
+    id: "bromo-chloro",
+    title: "Bromo Chloro Alkanes",
+    products: [
+      { name: "1-Bromo-2-chloroethane", cas: "107-04-0" },
+      { name: "1-Bromo-3-chloropropane", cas: "109-70-6", other: "BCP" },
+      { name: "1-Bromo-4-chlorobutane", cas: "6940-78-9", other: "BCB" },
+      { name: "1-Bromo-5-chloropentane", cas: "54512-75-3" },
+      { name: "1-Bromo-6-chlorohexane", cas: "6294-17-3" },
+      { name: "1-Bromo-8-chlorooctane", cas: "28598-82-5" },
+    ],
+  },
+  {
+    id: "organoacids",
+    title: "Bromine Derivatives of Organoacids",
+    products: [
+      { name: "Acetyl Bromide", cas: "506-96-7" },
+      { name: "Bromoacetyl Bromide", cas: "598-21-0" },
+      { name: "2-Bromopropionic Acid", cas: "598-72-1" },
+      { name: "2-Bromopropionyl Bromide", cas: "563-76-8" },
+      { name: "2-Bromobutanoic Acid", cas: "80-58-0" },
+      { name: "2-Bromo-2-methylpropionyl Bromide", cas: "20769-85-1" },
+      { name: "2-Bromovaleric Acid", cas: "584-93-0" },
+      { name: "2-Bromohexanoic Acid", cas: "616-05-7" },
+      { name: "6-Bromohexanoic Acid", cas: "4224-70-8" },
+      { name: "11-Bromoundecanoic Acid", cas: "2834-05-1" },
+    ],
+  },
+  {
+    id: "cyclic",
+    title: "Cyclic Bromine Derivatives",
+    products: [
+      { name: "Cyclopropylmethyl Bromide", cas: "7051-34-5" },
+      { name: "Bromocyclopentane", cas: "137-43-9" },
+      { name: "Bromocyclohexane", cas: "108-85-0" },
+      { name: "Cyclopropyl Bromide", cas: "4333-56-6" },
+    ],
+  },
+  {
+    id: "esters",
+    title: "Bromoacid Esters",
+    products: [
+      { name: "Ethyl Bromoacetate", cas: "105-36-2" },
+      { name: "Tert-Butyl Bromoacetate", cas: "5292-43-3" },
+      { name: "Methyl 2-Bromo-2-methylpropionate", cas: "23426-63-3" },
+      { name: "Ethyl 2-Bromo-2-methylpropionate", cas: "600-00-0" },
+      { name: "Ethyl 4-Bromobutyrate", cas: "2969-81-5" },
+      { name: "Methyl 6-Bromohexanoate", cas: "14273-90-6" },
+    ],
+  },
+  {
+    id: "aromatic",
+    title: "Aromatic Bromine Derivatives",
+    products: [
+      { name: "Bromobenzene", cas: "108-86-1" },
+      { name: "1,4-Dibromobenzene", cas: "106-37-6" },
+      { name: "4-Bromotoluene", cas: "106-38-7" },
+      { name: "4-Bromoanisole", cas: "104-92-7" },
+      { name: "4-Bromophenol", cas: "106-41-2" },
+      { name: "1-Bromonaphthalene", cas: "90-11-9" },
+      { name: "2,4,6-Tribromophenol", cas: "118-79-6" },
+    ],
+  },
+  {
+    id: "unsaturated",
+    title: "Unsaturated Bromine Derivatives",
+    products: [
+      { name: "3-Bromo-1-propene", cas: "106-95-6", other: "Allyl bromide" },
+      { name: "4-Bromo-1-butene", cas: "5162-44-7" },
+      { name: "5-Bromo-1-pentene", cas: "1119-51-2" },
+      { name: "6-Bromo-1-hexene", cas: "2695-47-8" },
+    ],
+  },
+  {
+    id: "fluoro",
+    title: "Specialty Bromo Fluoro Derivatives",
+    products: [
+      { name: "4-Bromofluorobenzene", cas: "460-00-4" },
+      { name: "3-Bromobenzotrifluoride", cas: "401-78-5" },
+      { name: "1-Bromo-2,4-difluorobenzene", cas: "348-57-2" },
+      { name: "1-Bromo-3,4-difluorobenzene", cas: "348-61-8" },
+      { name: "4-Fluorophenol", cas: "371-41-5" },
+    ],
+  },
+  {
+    id: "inorganic",
+    title: "Inorganic Bromine Compounds",
+    products: [
+      { name: "Sodium Bromide Anhydrous", cas: "7647-15-6" },
+      { name: "Potassium Bromide Anhydrous", cas: "7758-02-3" },
+      { name: "Calcium Bromide Solution / Anhydrous", cas: "7789-41-5" },
+      { name: "Zinc Bromide Anhydrous", cas: "7699-45-8" },
+      { name: "Ammonium Bromide", cas: "12124-97-9" },
+      { name: "Hydrobromic Acid 48%", cas: "10035-10-6" },
+    ],
+  },
+  {
+    id: "ptc",
+    title: "Phase Transfer Catalysts",
+    products: [
+      { name: "TEBAC", cas: "56-37-1" },
+      { name: "TBAB", cas: "1643-19-2" },
+      { name: "TBAHS", cas: "32503-27-8" },
+      { name: "TEAB", cas: "71-91-0" },
+      { name: "Ethyltriphenylphosphonium Bromide", cas: "1530-32-1" },
+      { name: "Methyltriphenylphosphonium Bromide", cas: "1779-49-3" },
+    ],
+  },
+  {
+    id: "hydroxy",
+    title: "Bromo Hydroxy Derivatives",
+    products: [
+      { name: "2-Bromoethanol", cas: "540-51-2" },
+      { name: "3-Bromopropanol", cas: "627-18-9" },
+      { name: "6-Bromohexanol", cas: "4286-55-9" },
+      { name: "8-Bromooctanol", cas: "50816-19-8" },
+      { name: "10-Bromodecanol", cas: "62871-09-4" },
+    ],
+  },
+  {
+    id: "quat",
+    title: "Quaternary Ammonium Salts",
+    products: [
+      { name: "Benzalkonium Bromide", cas: "91080-29-4", other: "BAC B" },
+      { name: "Benzalkonium Chloride", cas: "63449-41-2", other: "BKC" },
+      { name: "BKC C16", cas: "122-18-9" },
+      { name: "BKC C14", cas: "139-08-2" },
+      { name: "Benzyltributylammonium Bromide", cas: "25316-59-0", other: "BTAB" },
+    ],
+  },
+  {
+    id: "api",
+    title: "API & API Intermediates",
+    products: [
+      { name: "Diethyl Dipropyl Malonate", cas: "6065-63-0" },
+      { name: "Dipropyl Malonic Acid", cas: "1636-27-7" },
+      { name: "Divalproex Sodium", cas: "76584-70-8" },
+      { name: "Valproic Acid", cas: "99-66-1" },
+      { name: "Sodium Valproate", cas: "1069-66-5" },
+      { name: "Amisulpride", cas: "53583-79-2" },
+      { name: "Levosulpiride", cas: "23672-07-3" },
+      { name: "Fenofibrate", cas: "49562-28-9" },
+      { name: "Clotrimazole", cas: "23593-75-1" },
+      { name: "Ondansetron", cas: "99614-02-5" },
+    ],
+  },
+]
+
+export const oilGas = [
+  "Alkali Control Additives",
+  "Defoamers",
+  "Corrosion Inhibitors / Descalers",
+  "Dispersants / Deflocculants",
+  "Lubricants",
+  "Surfactants",
+  "Shale Inhibitors",
+  "Scavengers",
+  "Viscosifiers",
+  "Weighing Agents",
+  "Fluid Loss Additives",
+  "Oil-Base Mud Additives",
+  "Lost Circulation Materials",
+  "Completion Fluids",
+  "De-emulsifiers",
+  "Shale Control Additives",
+]
+
+export const families = [
+  {
+    title: "Alkyl Bromides",
+    href: "/products/bromine",
+    text: "From methyl to stearyl chains — volume alkyl bromides for pharma, agro, and specialty synthesis.",
+  },
+  {
+    title: "Aryl Bromides",
+    href: "/products/bromine",
+    text: "Bromobenzene, NBS, benzyl bromide, and substituted aromatics developed around the end use.",
+  },
+  {
+    title: "Inorganic Bromides",
+    href: "/products/core-volume",
+    text: "Sodium, calcium, potassium, ammonium, and lithium bromides for industrial and oilfield duty.",
+  },
+  {
+    title: "API Intermediates",
+    href: "/products/bromine",
+    text: "Valproate chemistry, malonates, and advanced intermediates built on in-house technology.",
+  },
+]
