@@ -113,6 +113,32 @@ a {
   opacity: calc(1 - var(--backdrop-blend, 0));
 }
 
+.hero-title {
+  font-size: 3rem;
+  line-height: 0.95;
+}
+
+.hero-kicker {
+  font-size: 60%;
+  line-height: 1.2;
+}
+
+.hero-brand {
+  font-size: 100%;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 6rem;
+  }
+}
+
 .backdrop-wash {
   background:
     linear-gradient(

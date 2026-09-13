@@ -36,18 +36,18 @@ export function Home() {
             initial={{ opacity: 0, y: 36 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.48, duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display mt-5 max-w-5xl text-5xl leading-[0.95] font-medium md:text-7xl lg:text-8xl"
+            className="hero-title font-display mt-5 max-w-5xl font-medium"
           >
-            <span className="text-[0.6em]">
-              <span className="inline-block bg-[#e39a55] px-[0.28em] text-cream">
+            <span className="hero-kicker">
+              <span className="inline-block bg-[#e39a55] px-[0.22em] text-cream">
                 Leading manufacturer
               </span>
               <br />
-              <span className="inline-block bg-[#e39a55] px-[0.28em] text-cream">
+              <span className="inline-block bg-[#e39a55] px-[0.22em] text-cream">
                 in the field of
               </span>{" "}
             </span>
-            <span className="text-copper-light uppercase">bromine derivatives.</span>
+            <span className="hero-brand text-copper-light uppercase">bromine derivatives.</span>
           </motion.h1>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -138,11 +138,6 @@ export function Home() {
           <Reveal>
             <p className="text-[11px] tracking-[0.3em] text-copper-light uppercase">Quality commitment</p>
             <h2 className="font-display mt-3 text-4xl md:text-5xl">Control from the first assay to the last drum.</h2>
-            <p className="mt-5 leading-relaxed text-cream/65">
-              Quality systems run at every stage — raw material, in-process, and finished product.
-              Laboratories work around the clock with GC, HPLC, UV, Karl Fischer, and infrared
-              spectroscopy. We are committed to product quality, timely delivery, and sustainability.
-            </p>
             <Link to="/infrastructure/qa-qc" className="mt-6 inline-flex items-center gap-2 text-sm text-copper-light">
               Quality systems <ArrowRight size={16} />
             </Link>
@@ -150,11 +145,6 @@ export function Home() {
           <Reveal delay={0.1}>
             <p className="text-[11px] tracking-[0.3em] text-copper-light uppercase">Research</p>
             <h2 className="font-display mt-3 text-4xl md:text-5xl">An in-house R&D centre, led by PhDs.</h2>
-            <p className="mt-5 leading-relaxed text-cream/65">
-              Two dedicated teams under five doctoral leaders develop new products and improve
-              existing lines. Reactors from 100 ml to 250 L, autoclaves to 25 L, and cGMP thinking
-              for key starting materials and intermediates.
-            </p>
             <Link to="/rd" className="mt-6 inline-flex items-center gap-2 text-sm text-copper-light">
               Visit R&D <ArrowRight size={16} />
             </Link>
